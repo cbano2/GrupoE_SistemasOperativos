@@ -10,11 +10,13 @@ int productos[50];
 
 clock_t ti, tf;
 double tiempoTotalTodosLosCajeros = 0;
+sem_t s;
+
 
 size_t c = sizeof(clientes) / sizeof(clientes[0]);
 size_t p = sizeof(productos) / sizeof(productos[0]);
 
-sem_t s;
+
 
 void *siendoAtentidoPorElCajero(void *arg){
 	double promedio = 0;
