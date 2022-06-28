@@ -55,7 +55,6 @@ double siendoAtentidoPorElCajero(int numero, int numero2){
 		ti = clock();
 		printf("\t\tEl tiempo de incio (en segundos) es: %lf\n", (double) ti / CLOCKS_PER_SEC);
 		for (int i = 1; i <= numero2; i++){
-			//printf("El producto %d del cliente %d ha sido cobrado \n", i, y);
 			sleep(0.99);
 		}
 		tf = clock();
