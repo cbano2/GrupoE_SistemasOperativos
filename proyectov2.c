@@ -28,9 +28,7 @@ int main (){
            	   		sleep(1);
             	  		break;
             	  		           	    
-        		case 0: 
-        			//printf("Yo soy hijo con PID %d y mi padre es %d \n", getpid(), getppid());
-        			//clienteComprando(p, c);
+        		case 0:
         			tiempoTotalPersonasCadaCajero = siendoAtentidoPorElCajero(c, p); 
         			tiempoTotalTodosLosCajeros += tiempoTotalPersonasCadaCajero; 
         			printf("\n=> El tiempo total que un cajero atendió a 100 clientes, es %lf \n", tiempoTotalPersonasCadaCajero);    
@@ -48,15 +46,6 @@ int main (){
         printf("-------------------------------------------------------------------------------------------------------------");
         printf("\n=> El tiempo total de todos los cajeros atendiendo, es %lf \n", tiempoTotalTodosLosCajeros); 
 }
-
-/*
-void clienteComprando(int producto, int numCliente){
-	for(int z = 1; z <= numCliente; z++){
-		printf("Este es el proceso hijo. Soy el cliente numero %d y tengo %d productos en mi carrito \n", z, producto);
-		sleep(1);
-	}
-}
-*/
 
 double siendoAtentidoPorElCajero(int numero, int numero2){
 	double promedio = 0;
