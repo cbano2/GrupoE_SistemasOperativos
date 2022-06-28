@@ -8,7 +8,6 @@ int cajeros[10];
 int clientes[100];
 int productos[50];
 
-void clienteComprando(int producto, int numCliente);
 double siendoAtentidoPorElCajero(int numero, int numero2);
 
 clock_t ti, tf;
