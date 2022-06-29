@@ -12,11 +12,8 @@ clock_t ti, tf;
 double tiempoTotalTodosLosCajeros = 0;
 sem_t s;
 
-
 size_t c = sizeof(clientes) / sizeof(clientes[0]);
 size_t p = sizeof(productos) / sizeof(productos[0]);
-
-
 
 void *siendoAtentidoPorElCajero(void *arg){
 	double promedio = 0;
@@ -26,7 +23,6 @@ void *siendoAtentidoPorElCajero(void *arg){
 		ti = clock();
 		printf("\tEl tiempo de incio (en segundos) es: %lf\n", (double) ti / CLOCKS_PER_SEC);
 		for (int i = 1; i <= p; i++){
-			//printf("El producto %d del cliente %d ha sido cobrado \n", i, y);
 			sleep(0.99);
 		}
 		tf = clock();
@@ -42,7 +38,6 @@ void *siendoAtentidoPorElCajero(void *arg){
 }
 
 int main (){
-
 	sem_init(&s, 0, 1);
 	pthread_t h1, h2, h3, h4, h5, h6, h7, h8, h9, h10;
 	
